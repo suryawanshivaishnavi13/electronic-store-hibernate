@@ -1,0 +1,41 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+    
+         <!-- Database Connection -->
+         <property name = "hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+         </property>
+         
+         <property name="hibernate.connection.url">
+             jdbc:mysql://localhost:3306/electronicsdb
+         </property>
+         
+         <property name = "hibernate.connection.username">
+           root
+         </property>
+         
+         <property name = "hibernate.connection.password">
+           root
+         </property>
+         
+         <!-- dialect -->
+         <property name = "hibernate.dialect">
+             org.hibernate.dialect.MySQLDialect
+         </property>
+         
+         <!-- Show SQL -->
+         <property name = "hibernate.show_sql">
+           true
+         </property>
+         
+         <!-- Auto Table Creation -->
+         <property name = "hibernate.hbm2ddl.auto">
+            update
+         </property>
+        
+        <!-- Entity Mapping -->
+         <mapping class="com.electronicsstore.Product"/>
+    </session-factory>
+
+</hibernate-configuration>      
